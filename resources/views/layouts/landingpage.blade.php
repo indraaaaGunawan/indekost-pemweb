@@ -45,6 +45,21 @@
             text-align: center;
             margin-top: 150px;
         }
+
+        /* CSS untuk button login */
+        .login-button {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #337ab7;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .login-button:hover {
+            background-color: #007bff;
+        }
     </style>
 </head>
 
@@ -59,6 +74,10 @@
     <header>
         <h1>@yield('header', 'Selamat Datang di Indekos')</h1>
         <p>@yield('subtitle', 'Temukan Kosan Nyaman dan Terjangkau')</p>
+
+        <!-- Button untuk login -->
+        <a href="/login" class="login-button">Login</a>
+
     </header>
 
     <!-- Bagian Konten Utama -->
