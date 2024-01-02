@@ -29,7 +29,18 @@ class KamarController extends Controller
      */
     public function store(Request $request)
     {
-        Kamar::create($request->all());
+        $request->validate([
+            'tipe_kamar' => 'required',
+            'gambar' => 'required',
+            'status' => 'required',
+            'harga' => 'required',
+            'deskripsi_kamar' => 'required',
+        ]);
+        $kamar = Kamar::create($request->all());
+
+        $request->file('gambar')->move('images/', $request->file('gambar')->getClientOriginalName());
+        $kamar->gambar = $request->file('gambar')->getClientOriginalName();
+        $kamar->save();
 
         return redirect()->route('kamar')->with('success', 'Kamar Berhasil Ditambahkan');
     }
@@ -60,7 +71,18 @@ class KamarController extends Controller
     public function update(Request $request, string $id)
     {
         $kamar = Kamar::findOrFail($id);
+        $request->validate([
+            'tipe_kamar' => 'required',
+            'gambar' => 'required',
+            'status' => 'required',
+            'harga' => 'required',
+            'deskripsi_kamar' => 'required',
+        ]);
         $kamar->update($request->all());
+
+        $request->file('gambar')->move('images/', $request->file('gambar')->getClientOriginalName());
+        $kamar->gambar = $request->file('gambar')->getClientOriginalName();
+        $kamar->save();
 
         return redirect()->route('kamar')->with('success', 'Kamar Berhasil Diupdate');
     }
