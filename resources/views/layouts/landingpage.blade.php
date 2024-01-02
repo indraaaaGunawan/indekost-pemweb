@@ -40,6 +40,11 @@
             padding: 20px;
             background-color: #ffffff;
         }
+
+        .centered-footer {
+            text-align: center;
+            margin-top: 150px;
+        }
     </style>
 </head>
 
@@ -57,9 +62,11 @@
     </div>
 
     <!-- Bagian Footer (opsional) -->
-    <footer>
+    <!-- Bagian Footer (opsional) -->
+    <footer class="centered-footer">
         <p>&copy; 2023 Indekos. All rights reserved.</p>
     </footer>
+
 
     <!-- Link ke script JavaScript (opsional) -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

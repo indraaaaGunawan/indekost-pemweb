@@ -17,7 +17,7 @@ use App\Http\Controllers\KamarController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 //register and login
