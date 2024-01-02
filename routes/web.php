@@ -50,3 +50,5 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
 });
+
+Route::get('/home', [App\Http\Controllers\landingpageController::class, 'landingpage']);
