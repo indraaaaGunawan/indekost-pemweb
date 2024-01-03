@@ -20,13 +20,18 @@
 
     <li class="nav-item">
         <a class="nav-link" href="{{ route('kamar') }}">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Kamar</span></a>
+            <i class="fas fa-fw fa-building"></i>
+            <span>Room</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('transaksi') }}">
+            <i class="fas fa-fw fa-shopping-cart"></i>
+            <span>Transaksi</span></a>
     </li>
 
     <li class="nav-item">
         <a class="nav-link" href="/profile">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <i class="fas fa-fw fa-users"></i>
             <span>Profile</span></a>
     </li>
 

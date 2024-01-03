@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Home Kamar')
+@section('title', 'Home Room')
 
 @section('contents')
     <div class="d-flex align-items-center justify-content-between">
-        <h1 class="mb-0">List Kamar</h1>
+        <h1 class="mb-0">List Room</h1>
         <a href="{{ route('kamar.create') }}" class="btn btn-primary">
-            <i class="fas fa-plus"></i> Add Kamar
+            <i class="fas fa-plus"></i> Add Room
         </a>
     </div>
     <hr />
