@@ -129,7 +129,7 @@
     <!-- Bagian Footer (opsional) -->
     <!-- Bagian Footer (opsional) -->
     <footer class="centered-footer">
-        <p>&copy; 2023 Indekos. All rights reserved.</p>
+        <p>&copy; 2024 Indekos. All rights reserved.</p>
     </footer>
     @include('sweetalert::alert')
 
