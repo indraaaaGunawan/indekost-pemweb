@@ -71,17 +71,29 @@ class KamarController extends Controller
     public function update(Request $request, string $id)
     {
         $kamar = Kamar::findOrFail($id);
+
         $request->validate([
             'tipe_kamar' => 'required',
-            'gambar' => 'required',
+            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // pastikan validasi untuk gambar
             'status' => 'required',
             'harga' => 'required',
             'deskripsi_kamar' => 'required',
         ]);
-        $kamar->update($request->all());
 
-        $request->file('gambar')->move('images/', $request->file('gambar')->getClientOriginalName());
-        $kamar->gambar = $request->file('gambar')->getClientOriginalName();
+        // Perbarui atribut-atribut selain gambar
+        $kamar->tipe_kamar = $request->input('tipe_kamar');
+        $kamar->status = $request->input('status');
+        $kamar->harga = $request->input('harga');
+        $kamar->deskripsi_kamar = $request->input('deskripsi_kamar');
+
+        // Perbarui gambar jika ada
+        if ($request->hasFile('gambar')) {
+            $gambar = $request->file('gambar');
+            $gambar->move('images/', $gambar->getClientOriginalName());
+            $kamar->gambar = $gambar->getClientOriginalName();
+        }
+
+        // Simpan perubahan pada model Kamar
         $kamar->save();
 
         return redirect()->route('kamar')->with('success', 'Kamar Berhasil Diupdate');

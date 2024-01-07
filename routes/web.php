@@ -57,9 +57,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
     //booking
     Route::get('/booking', [BookingController::class, 'index'])->name('booking');
-    //booking
-    Route::resource('booking', BookingController::class);
-
 });
 
+//booking
+Route::resource('booking', BookingController::class);
 Route::get('/detail/{id}', 'DetailController@show')->name('detail.show');

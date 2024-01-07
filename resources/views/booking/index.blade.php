@@ -1,4 +1,4 @@
-@extends('layouts.landingpage')
+{{-- @extends('layouts.landingpage')
 
 @section('content')
     <div class="container">
@@ -6,7 +6,7 @@
 
         <a href="{{ route('booking.create') }}" class="btn btn-primary mb-3">Add Booking</a>
 
-        @if(session('success'))
+        @if (session('success'))
             <div class="alert alert-success">
                 {{ session('success') }}
             </div>
@@ -22,7 +22,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($bookings as $booking)
+                @foreach ($bookings as $booking)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $booking->name }}</td>
@@ -40,4 +40,4 @@
             </tbody>
         </table>
     </div>
-@endsection
+@endsection --}}

@@ -16,7 +16,8 @@
         <p>Terletak strategis di pusat kota. Fasilitas lengkap dan harga terjangkau.</p>
         <p><strong>Harga:</strong> Rp 500.000/bulan</p>
         <p><strong>Fasilitas:</strong> Kamar mandi luar</p>
-        <a href="{{ route('detail', ['id' => $id]) }}" class="btn btn-primary">Lihat Detail</a>
+        {{-- <a href="{{ route('detail', ['id' => $id]) }}" class="btn btn-primary">Lihat Detail</a> --}}
+        <button class="btn btn-primary">Detail</button>
         <button class="btn btn-primary">Book Kamar</button>
     </div>
 
@@ -29,7 +30,7 @@
         <P><strong>Fasilitas:</strong>Kamar mandi dalam</P>
         <button class="btn btn-primary">Lihat Detail</button>
         <button class="btn btn-primary">Book Kamar</button>
-        <a href="/booking.index" class="btn btn-primary">Booking</a>
+        {{-- <a href="/booking" class="btn btn-primary">Booking</a> --}}
     </div>
 
     <!-- Tambahkan lebih banyak item kosan sesuai kebutuhan -->
