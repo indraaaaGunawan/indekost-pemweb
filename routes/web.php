@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\KamarController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TransaksiController;
+use App\Http\Controllers\BookingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,4 +55,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi');
     //profile
     Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
+    //booking
+    Route::get('/booking', [BookingController::class, 'index'])->name('booking');
+    //booking
+    Route::resource('booking', BookingController::class);
+
 });

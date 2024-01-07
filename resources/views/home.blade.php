@@ -28,6 +28,7 @@
         <P><strong>Fasilitas:</strong>Kamar mandi dalam</P>
         <button class="btn btn-primary">Lihat Detail</button>
         <button class="btn btn-primary">Book Kamar</button>
+        <a href="/booking.index" class="btn btn-primary">Booking</a>
     </div>
 
     <!-- Tambahkan lebih banyak item kosan sesuai kebutuhan -->
