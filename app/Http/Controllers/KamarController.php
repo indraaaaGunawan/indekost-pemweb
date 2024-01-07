@@ -109,4 +109,11 @@ class KamarController extends Controller
 
         return redirect()->route('kamar')->with('success', 'Kamar Berhasil Dihapus');
     }
+
+    public function detailkamar(string $id)
+    {
+        $kamar = Kamar::findOrFail($id);
+
+        return view('detail', compact('kamar'));
+    }
 }
