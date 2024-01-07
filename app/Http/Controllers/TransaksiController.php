@@ -44,10 +44,9 @@ class TransaksiController extends Controller
         $kamarById->save();
 
         $kamar = Kamar::orderBy('created_at', 'DESC')->get();
-        Alert::success('Success Title', 'Success Message');
         // return $request;
         // return with alert notification js
-        return redirect()->route('home')->with('success', 'Pemesanan Kamar Berhasil!');
+        return redirect()->route('home')->with('success', 'Booking Success!!');
     }
 
     /**

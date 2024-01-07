@@ -15,7 +15,7 @@
                             <div class="row no-gutters align-items-center">
                                 <div class="col mr-2">
                                     <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                        Status Kos (Tersedia)</div>
+                                        Status Kost (Available)</div>
                                     <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $tersediaCount }}</div>
                                 </div>
                                 <div class="col-auto">
@@ -33,7 +33,7 @@
                             <div class="row no-gutters align-items-center">
                                 <div class="col mr-2">
                                     <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">
-                                        Status Kos (Tidak Tersedia)</div>
+                                        Status Kost (Not Available)</div>
                                     <div class="h5 mb-0 font-weight-bold text-gray-800">{{ $tidakTersediaCount }}</div>
                                 </div>
                                 <div class="col-auto">

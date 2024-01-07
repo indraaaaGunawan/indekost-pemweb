@@ -9,10 +9,10 @@
         @csrf
         <div class="row mb-3">
             <div class="col">
-                <input type="text" name="tipe_kamar" class="form-control" placeholder="Tipe Kamar">
+                <input type="text" name="tipe_kamar" class="form-control" placeholder="Type Room">
             </div>
             <div class="col">
-                <input type="text" name="harga" class="form-control" placeholder="Harga">
+                <input type="text" name="harga" class="form-control" placeholder="Price">
             </div>
         </div>
         <div class="row mb-3">
@@ -25,7 +25,7 @@
                 <input type="file" name="gambar" class="form-control">
             </div>
             <div class="col">
-                <textarea class="form-control" name="deskripsi_kamar" placeholder="Deskripsi"></textarea>
+                <textarea class="form-control" name="deskripsi_kamar" placeholder="Description"></textarea>
             </div>
         </div>
 

@@ -8,7 +8,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-md-9 col-md-push-3">
+        <div class="col-md-6 col-md-push-3 mx-auto">
             <table class="table table-bordered">
                 <tbody>
                     <tr>
@@ -17,7 +17,7 @@
                     </tr>
                     <tr>
                         <td width="18%">Harga</td>
-                        <td>Rp <?php echo number_format($kamar->harga); ?></td>
+                        <td>Rp {{ number_format($kamar->harga) }}</td>
                     </tr>
                     <tr>
                         <td width="18%">Status</td>
@@ -39,4 +39,5 @@
                 Kembali</a>
         </div>
     </div>
+
 @stop

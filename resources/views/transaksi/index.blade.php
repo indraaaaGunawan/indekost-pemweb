@@ -8,7 +8,7 @@
 
         <!-- Page Heading -->
         <h1 class="h3 mb-2 text-gray-800">Table</h1>
-        <p class="mb-4">Data Transaksi Untuk Mengetahui History Transaksi</p>
+        <p class="mb-4">Transaction Data to Find Out Transaction History</p>
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
@@ -28,16 +28,6 @@
                                 <th>Date</th>
                             </tr>
                         </thead>
-                        <tfoot>
-                            <tr>
-                                <th>No</th>
-                                <th>Name</th>
-                                <th>Number Phone</th>
-                                <th>Type Room</th>
-                                <th>Price</th>
-                                <th>Date</th>
-                            </tr>
-                        </tfoot>
                         <tbody>
                             @foreach ($transaksis as $data)
                                 <tr>

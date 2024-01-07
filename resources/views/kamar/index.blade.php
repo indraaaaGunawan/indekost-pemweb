@@ -33,7 +33,8 @@
                     <tr>
                         <td class="align-middle">{{ $loop->iteration }}</td>
                         <td class="align-middle">{{ $rs->tipe_kamar }}</td>
-                        <td class="align-middle">{{ $rs->gambar }}</td>
+                        <td class="align-middle"><img src="{{ url('images/' . $rs->gambar) }}"
+                                style="height: 100px; width: 100px;"></td>
                         <td class="align-middle">{{ $rs->status }}</td>
                         <td class="align-middle">{{ $rs->harga }}</td>
                         <td class="align-middle">{{ $rs->deskripsi_kamar }}</td>
