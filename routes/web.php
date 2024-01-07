@@ -61,3 +61,5 @@ Route::middleware('auth')->group(function () {
     Route::resource('booking', BookingController::class);
 
 });
+
+Route::get('/detail/{id}', 'DetailController@show')->name('detail.show');

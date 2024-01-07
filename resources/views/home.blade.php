@@ -12,10 +12,11 @@
     <!-- Contoh Kosan Item -->
     <div class="kosan-item">
         <h2>Kosan Indah</h2>
+        <img src="{{ asset('images/download (3).jpeg') }}" alt="Kosan Indah Image" style="max-width: 300px;">
         <p>Terletak strategis di pusat kota. Fasilitas lengkap dan harga terjangkau.</p>
         <p><strong>Harga:</strong> Rp 500.000/bulan</p>
-        <p><strong>Fasilitas:</strong> Kamar mandii luar</p>
-        <button class="btn btn-primary">Lihat Detail</button>
+        <p><strong>Fasilitas:</strong> Kamar mandi luar</p>
+        <a href="{{ route('detail', ['id' => $id]) }}" class="btn btn-primary">Lihat Detail</a>
         <button class="btn btn-primary">Book Kamar</button>
     </div>
 

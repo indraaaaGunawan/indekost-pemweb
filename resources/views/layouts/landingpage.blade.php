@@ -21,12 +21,23 @@
 
         /* Gaya untuk bagian header */
         header {
-            background-color: #007bff;
-            color: #ffffff;
+            background-image: url('/images/background.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: whitesmoke;
             text-align: center;
             padding: 80px 0;
+            font-family: 'Verdana Bold';
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-
+        .subtitle{
+            text-align: center;
+            padding: 80px 0;
+            font-family: 'Verdana Bold';
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            color: whitesmoke;
+        }
         /* Gaya untuk bagian konten utama */
         .main-content {
             padding: 40px;
@@ -73,7 +84,7 @@
     <!-- Bagian Header -->
     <header>
         <h1>@yield('header', 'Selamat Datang di Indekos')</h1>
-        <p>@yield('subtitle', 'Temukan Kosan Nyaman dan Terjangkau')</p>
+        <h3>@yield('subtitle', 'Temukan Kosan Nyaman dan Terjangkau')</h3>
 
         <!-- Button untuk login -->
         <a href="/login" class="login-button">Login</a>
