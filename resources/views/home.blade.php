@@ -2,9 +2,9 @@
 
 @extends('layouts.landingpage')
 
-@section('title', 'Selamat Datang di Kosan Kita')
+@section('title', 'Welcome to Kosan Kita')
 
-@section('header', 'Selamat Datang di Kosan Kita')
+@section('header', 'Welcome to Kosan Kita')
 
 @section('subtitle', 'Temukan Kosan Nyaman dan Terjangkau')
 
@@ -16,9 +16,9 @@
                     <h2>Room Type {{ $k->tipe_kamar }}</h2>
                     {{-- <img src="{{ asset('images/download (3).jpeg') }}" alt="Kosan Indah Image" style="max-width: 300px;"> --}}
                     <p>{{ $k->deskripsi_kamar }}</p>
-                    <p><strong>Harga:</strong> Rp{{ number_format($k->harga) }}</p>
-                    <a href="{{ route('detail.show', ['id' => $k->id]) }}" class="btn btn-primary">Lihat Detail</a>
-                    <a href="{{ route('booking', ['id' => $k->id]) }}" class="btn btn-success">Book Room</a>
+                    <p><strong>Price:</strong> Rp{{ number_format($k->harga) }}</p>
+                    <a href="{{ route('detail.show', ['id' => $k->id]) }}" class="btn btn-primary">Details</a>
+                    <a href="{{ route('booking', ['id' => $k->id]) }}" class="btn btn-success">Booking Room</a>
                 </div>
             </div>
         @endforeach
