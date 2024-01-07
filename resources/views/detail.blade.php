@@ -1,8 +1,8 @@
 @extends('layouts.landingpage')
 
-@section('title', 'Selamat Datang di Kosan Kita')
+@section('title', 'Welcome to Kosan Kita')
 
-@section('header', 'Selamat Datang di Kosan Kita')
+@section('header', 'Welcome to Kosan Kita')
 
 @section('subtitle', 'Temukan Kosan Nyaman dan Terjangkau')
 
@@ -36,7 +36,7 @@
                 </tbody>
             </table>
             <a href="{{ URL::to('/') }}" class="btn btn-primary"><i class="glyphicon glyphicon-chevron-left"></i>
-                Kembali</a>
+                Back</a>
         </div>
     </div>
 

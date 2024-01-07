@@ -106,7 +106,7 @@
                         {{ auth()->user()->name }}
                     </a>
                 @else
-                    <button type="button" class="btn btn-primary">
+                    <a href="{{ route('userProfile') }}" class="btn btn-primary">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-person" viewBox="0 0 16 16">
                             <path
@@ -114,7 +114,7 @@
                             </path>
                         </svg>
                         {{ auth()->user()->name }}
-                    </button>
+                    </a>
                 @endif
             @endauth
         @endauth

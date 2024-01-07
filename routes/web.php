@@ -59,6 +59,9 @@ Route::middleware('auth')->group(function () {
     //booking
     Route::get('/booking/{id}', [TransaksiController::class, 'bookingRoom'])->name('booking');
     Route::post('transaksi/store', [TransaksiController::class, 'store'])->name('transaksi.store');
+
+    //userProfile
+    Route::get('/profile', [TransaksiController::class, 'userProfile'])->name('userProfile');
 });
 
 //detail room user

@@ -98,4 +98,10 @@ class TransaksiController extends Controller
         // return $kamar;
         return view('booking', compact('kamar', 'user'));
     }
+
+    public function userProfile()
+    {
+        $user = Auth::user();
+        return view('userprofile', compact('user'));
+    }
 }
