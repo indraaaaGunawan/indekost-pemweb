@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Show Kamar')
+@section('title', 'Room Detail')
 
 @section('contents')
-    <h1 class="mb-0">Detail Kamar</h1>
+    <h1 class="mb-0">Room Detail</h1>
     <hr />
     <div class="row">
         <div class="col mb-3">

@@ -19,11 +19,11 @@
         <thead class="table-primary">
             <tr>
                 <th>#</th>
-                <th>Tipe Kamar</th>
-                <th>Gambar</th>
+                <th>Type Room</th>
+                <th>Image</th>
                 <th>Status</th>
-                <th>Harga</th>
-                <th>Deskripsi</th>
+                <th>Price</th>
+                <th>Description</th>
                 <th>Action</th>
             </tr>
         </thead>

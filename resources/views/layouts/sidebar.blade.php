@@ -28,13 +28,17 @@
             <i class="fas fa-fw fa-shopping-cart"></i>
             <span>Transaksi</span></a>
     </li>
-
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('user') }}">
+            <i class="fas fa-fw fa-users"></i>
+            <span>Customer</span></a>
+    </li>
     <li class="nav-item">
         <a class="nav-link" href="/profile">
-            <i class="fas fa-fw fa-users"></i>
+            <i class="fas fa-fw fa-male"></i>
             <span>Profile</span></a>
     </li>
-    
+
 
 
     <!-- Divider -->

@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Edit Kamar')
+@section('title', 'Edit Room')
 
 @section('contents')
-    <h1 class="mb-0">Edit Kamar</h1>
+    <h1 class="mb-0">Edit Room</h1>
     <hr />
     <form action="{{ route('kamar.update', $kamar->id) }}" method="POST" enctype="multipart/form-data">
         @csrf

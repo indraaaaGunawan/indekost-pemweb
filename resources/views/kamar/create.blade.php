@@ -1,9 +1,9 @@
 @extends('layouts.app')
 
-@section('title', 'Create Kamar')
+@section('title', 'Add Room')
 
 @section('contents')
-    <h1 class="mb-0">Add Kamar</h1>
+    <h1 class="mb-0">Add Room</h1>
     <hr />
     <form action="{{ route('kamar.store') }}" method="POST" enctype="multipart/form-data">
         @csrf

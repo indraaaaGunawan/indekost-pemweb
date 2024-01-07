@@ -10,8 +10,8 @@ use Illuminate\Http\Request;
 class Controller extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
-    public function booking()
-    {
-        return view('booking');
-    }
+    // public function booking()
+    // {
+    //     return view('booking');
+    // }
 }

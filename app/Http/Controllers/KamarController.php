@@ -73,11 +73,11 @@ class KamarController extends Controller
         $kamar = Kamar::findOrFail($id);
 
         $request->validate([
-            'tipe_kamar' => 'required',
-            'gambar' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // pastikan validasi untuk gambar
-            'status' => 'required',
-            'harga' => 'required',
-            'deskripsi_kamar' => 'required',
+            'tipe_kamar' => 'nullable',
+            'gambar' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // pastikan validasi untuk gambar
+            'status' => 'nullable',
+            'harga' => 'nullable',
+            'deskripsi_kamar' => 'nullable',
         ]);
 
         // Perbarui atribut-atribut selain gambar

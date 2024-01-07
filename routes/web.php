@@ -30,7 +30,7 @@ Route::controller(AuthController::class)->group(function () {
 });
 
 //dashboard
-Route::middleware('auth')->group(function () {
+Route::middleware('auth', 'admin')->group(function () {
     // Route::get('dashboard', function () {
     //     return view('dashboard');
     // })->name('dashboard');
@@ -47,13 +47,18 @@ Route::middleware('auth')->group(function () {
         Route::delete('destroy/{id}', 'destroy')->name('kamar.destroy');
     });
 
+    //user
+    Route::get('/user', [App\Http\Controllers\UserController::class, 'index'])->name('user');
     //transaksi
     Route::get('transaksi', [TransaksiController::class, 'index'])->name('transaksi');
-    Route::post('transaksi/store', [TransaksiController::class, 'store'])->name('transaksi.store');
     //profile
     Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
+});
+
+Route::middleware('auth')->group(function () {
     //booking
     Route::get('/booking/{id}', [TransaksiController::class, 'bookingRoom'])->name('booking');
+    Route::post('transaksi/store', [TransaksiController::class, 'store'])->name('transaksi.store');
 });
 
 //detail room user

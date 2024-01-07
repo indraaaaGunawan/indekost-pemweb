@@ -6,6 +6,7 @@ use App\Models\Transaksi;
 use Illuminate\Http\Request;
 use App\Models\Kamar;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class TransaksiController extends Controller
 {
@@ -14,7 +15,8 @@ class TransaksiController extends Controller
      */
     public function index()
     {
-        return view('transaksi/index');
+        $transaksis = Transaksi::orderBy('created_at', 'DESC')->get();
+        return view('transaksi/index', compact('transaksis'));
     }
 
     /**
@@ -42,7 +44,7 @@ class TransaksiController extends Controller
         $kamarById->save();
 
         $kamar = Kamar::orderBy('created_at', 'DESC')->get();
-
+        Alert::success('Success Title', 'Success Message');
         // return $request;
         // return with alert notification js
         return redirect()->route('home')->with('success', 'Pemesanan Kamar Berhasil!');
@@ -83,6 +85,7 @@ class TransaksiController extends Controller
     public function home()
     {
         $kamar = Kamar::where('status', 'Tersedia')->orderBy('created_at', 'DESC')->get();
+
 
         // return $kamar;
         return view('home', compact('kamar'));
