@@ -1,4 +1,4 @@
-@extends('layouts.default')
+@extends('layouts.landingpage')
 
 @section('title', 'Selamat Datang di Kosan Kita')
 
@@ -10,9 +10,6 @@
     <div class="row">
         <div class="col-md-9 col-md-push-3">
             <table class="table table-bordered">
-                {{-- <thead>
-                        <th colspan="2">{{ $ds->brand }} : {{ $ds->type }}</th>
-                    </thead> --}}
                 <tbody>
                     <tr>
                         <td width="18%">Type Room</td>
@@ -28,7 +25,9 @@
                     </tr>
                     <tr>
                         <td width="18%">Gambar</td>
-                        <td>{{ $kamar->gambar }}</td>
+                        <td>
+                            <img src="{{ asset('images/' . $kamar->gambar) }}" height="100px">
+                        </td>
                     </tr>
                     <tr>
                         <td width="18%">Deskripsi</td>
@@ -36,10 +35,8 @@
                     </tr>
                 </tbody>
             </table>
-            <a href="{{ URL::to('/home') }}" class="btn btn-default"><i class="glyphicon glyphicon-chevron-left"></i>
+            <a href="{{ URL::to('/') }}" class="btn btn-primary"><i class="glyphicon glyphicon-chevron-left"></i>
                 Kembali</a>
         </div>
-        <div class="col-md-3 col-md-pull-9"><img src="{{ images('download(3)') }}/{{ $kamar->gambar }}" width="100%"
-                height="100%"></div>
     </div>
 @stop

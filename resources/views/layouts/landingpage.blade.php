@@ -31,13 +31,15 @@
             font-family: 'Verdana Bold';
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-        .subtitle{
+
+        .subtitle {
             text-align: center;
             padding: 80px 0;
             font-family: 'Verdana Bold';
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             color: whitesmoke;
         }
+
         /* Gaya untuk bagian konten utama */
         .main-content {
             padding: 40px;
@@ -87,9 +89,14 @@
         <h3>@yield('subtitle', 'Temukan Kosan Nyaman dan Terjangkau')</h3>
 
         <!-- Button untuk login -->
-        <a href="/login" class="login-button">Login</a>
+        @guest
+            <a href="/login" class="login-button">Login</a>
+        @endguest
+        @auth
+            <a href="/logut" class="login-button">Logout</a>
+            {{-- <a href="/dashboard" class="btn btn-info">Dashboard</a> --}}
+        @endauth
 
-    
     </header>
 
     <!-- Bagian Konten Utama -->

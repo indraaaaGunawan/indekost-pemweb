@@ -18,10 +18,6 @@ use App\Http\Controllers\BookingController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
 //register and login
 Route::controller(AuthController::class)->group(function () {
     Route::get('/register', 'register')->name('register');
@@ -52,13 +48,14 @@ Route::middleware('auth')->group(function () {
     });
 
     //transaksi
-    Route::get('/transaksi', [TransaksiController::class, 'index'])->name('transaksi');
+    Route::get('transaksi', [TransaksiController::class, 'index'])->name('transaksi');
+    Route::post('transaksi/store', [TransaksiController::class, 'store'])->name('transaksi.store');
     //profile
     Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
     //booking
-    Route::get('/booking', [BookingController::class, 'index'])->name('booking');
+    Route::get('/booking/{id}', [TransaksiController::class, 'bookingRoom'])->name('booking');
 });
 
-//booking
-Route::resource('booking', BookingController::class);
+//detail room user
+Route::get('/', [TransaksiController::class, 'home'])->name('home');
 Route::get('/detail/{id}', [KamarController::class, 'detailkamar'])->name('detail.show');
