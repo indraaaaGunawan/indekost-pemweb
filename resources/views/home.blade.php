@@ -2,9 +2,9 @@
 
 @extends('layouts.landingpage')
 
-@section('title', 'Welcome to Kosan Kita')
+@section('title', 'Welcome to Indekost')
 
-@section('header', 'Welcome to Kosan Kita')
+@section('header', 'Welcome to Indekost')
 
 @section('subtitle', 'Temukan Kosan Nyaman dan Terjangkau')
 
