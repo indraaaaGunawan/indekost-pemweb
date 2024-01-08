@@ -52,7 +52,7 @@ Route::middleware('auth', 'admin')->group(function () {
     //transaksi
     Route::get('transaksi', [TransaksiController::class, 'index'])->name('transaksi');
     //profile
-    Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
+    Route::get('/adminprofile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
 });
 
 Route::middleware('auth')->group(function () {

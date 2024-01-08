@@ -34,7 +34,7 @@
             <span>Customer</span></a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="/profile">
+        <a class="nav-link" href="/adminprofile">
             <i class="fas fa-fw fa-male"></i>
             <span>Profile</span></a>
     </li>
